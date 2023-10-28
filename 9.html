@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<body background="download.png">
+   <title>Restaurant</title>
+   <link rel="stylesheet" type="text/css" href="9.css">
+</head>
+
+<body style="background-color:white">
+   <center><h2>MM Restaurant</h2></center>
+   <div class="container">
+      <div class="car-types">
+         <div class="car-card">
+            <center><h3 style="color:White">Pasta</h3></center>
+            <center><img src=authentic-italian-pasta.jpg width=100 height=100></center>
+            <center><button onclick="displaycarDetails('Pasta')">Add to Cart</button></center>
+         </div>
+         <div class="car-card">
+            <center><h3 style="color:White">Pizza</h3></center>
+			<center><img src=pizza-pizza-filled-with-tomatoes-salami-olives.jpg width=100 height=100></center>
+			<center><button onclick="displaycarDetails('Pizza')">Add to Cart</button></center>
+         </div>
+         <div class="car-card">
+            <center><h3 style="color:White">Vecteezy</h3></center>
+			<center><img src=vecteezy_tasty-and-appetizing-hamburger-ai-generative_23809726_659.jpg width=100 height=100></center>
+            <center><button onclick="displaycarDetails('Vecteezy')">Add to Cart</button></center>
+         </div>
+      </div>
+   </div>
+   
+   <div id="carDetailsContainer" class="car-details-container" style="display: none;">
+      <h3 id="carType"></h3>
+      <p>Rate is : RS-500/-</p>
+      <button onclick="displayPurchase()">Purchase</button>
+   </div>
+   
+   <div id="purchaseContainer" class="purchase-container" style="display: none;">
+      <h3>Purchase</h3>
+      <p>Customer Name: <input type="text" id="customerName"></p>
+      <p>Buying item: <span id="carTypePurchase"></span></p>
+      <p>with exchange: <input type="checkbox" id="with exchange"></p>
+      <button onclick="displayPayment()">Make Payment</button>
+   </div>
+
+   <div id="paymentContainer" class="payment-container" style="display: none;">
+      <h3>Payment</h3>
+      <p>Buying item: <span id="carTypePayment"></span></p>
+      <p>Customer: <span id="customerDetails"></span></p>
+      <p>Price: <span id="price"></span></p>
+      <h4>Enter Card Details:</h4>
+      <input type="text" placeholder="Card Number">
+      <input type="text" placeholder="CVV">
+      <button onclick="returnHome()">Pay</button>
+   </div>
+
+   <div id="homeContainer" class="home-container" style="display: none;">
+      <p><h2>Thank you for your purchase! Enjoy your car!<h2></p> 
+   </div>
+
+   <script src="9.js"></script>
+</body>
+
+</html>
